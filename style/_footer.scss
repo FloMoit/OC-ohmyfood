@@ -1,0 +1,54 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #353535;
+  color: white;
+  padding: 22px 25px;
+
+  .footer-title {
+    font-size: 18px;
+    font-family: "Shrikhand";
+    font-style: italic;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-height: 50px;
+
+    .footer-item {
+      display: flex;
+      flex-direction: row;
+      gap: 11px;
+
+      img {
+        height: 13px;
+        width: 11px;
+        align-self: center;
+      }
+      span {
+        font-size: 16px;
+        align-self: center;
+      }
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    flex-direction: row-reverse;
+    gap: 35px;
+    padding: 30px 25px;
+
+    .footer-title {
+      align-self: flex-end;
+    }
+    .footer-menu {
+      flex-direction: row;
+      gap: 20px;
+      .footer-item {
+        min-width: 130px;
+        align-self: flex-end;
+      }
+    }
+  }
+}
