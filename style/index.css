@@ -186,6 +186,42 @@ section .is-new {
   font-weight: 700;
 }
 
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(136, 136, 136, 0.8509803922);
+  animation: vanish 2s forwards ease-out 3s;
+}
+#loader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: -25px;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes vanish {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
 header {
   display: flex;
   gap: 10px;
