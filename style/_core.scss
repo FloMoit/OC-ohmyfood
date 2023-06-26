@@ -3,6 +3,10 @@ $secondary: #ff79da;
 $tertiary: #99e2d0;
 $tertiaryText: #008766;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 18px;
   font-family: "Roboto";
