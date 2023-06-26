@@ -1,0 +1,177 @@
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$tertiaryText: #008766;
+
+body {
+  font-size: 18px;
+  font-family: "Roboto";
+  background: white;
+}
+
+.btn {
+  text-align: center;
+  color: white;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  padding: 15px;
+  border: 0;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto";
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+header {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  div {
+    text-align: center;
+    flex: 1;
+    padding: 15px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .backer {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    margin-top: -15px;
+    i {
+      font-size: 30px;
+    }
+  }
+}
+
+h1 {
+  font-size: 30px;
+  font-family: "Shrikhand";
+  font-style: italic;
+}
+
+section {
+  flex-direction: column;
+  display: flex;
+
+  > * {
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .is-new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: $tertiary;
+    color: $tertiaryText;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 8px 13px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  section {
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  section.explain h2,
+  section.restaurents h2 {
+    font-size: 24px;
+  }
+}
+
+.meal {
+  &__title {
+    font-weight: 700;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #353535;
+  color: white;
+  padding: 22px 25px;
+
+  .footer-title {
+    font-size: 18px;
+    font-family: "Shrikhand";
+    font-style: italic;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-height: 50px;
+
+    .footer-item {
+      display: flex;
+      flex-direction: row;
+      gap: 11px;
+
+      img {
+        height: 13px;
+        width: 11px;
+        align-self: center;
+      }
+      span {
+        font-size: 16px;
+        align-self: center;
+      }
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    flex-direction: row-reverse;
+    gap: 35px;
+    padding: 30px 25px;
+
+    .footer-title {
+      align-self: flex-end;
+    }
+    .footer-menu {
+      flex-direction: row;
+      gap: 20px;
+      .footer-item {
+        min-width: 130px;
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+@mixin mealLoop($delay: 750ms, $step: 200ms, $loops: 5) {
+  @for $i from 0 through $loops {
+    .meal:nth-child(#{$i}) {
+      animation-delay: $delay;
+    }
+    $delay: $delay + $step;
+  }
+}
