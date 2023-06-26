@@ -76,12 +76,14 @@ main {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    max-width: 605px;
 
     section {
       display: flex;
       flex-direction: column;
       gap: 12px;
       overflow: hidden;
+      padding: 15px;
     }
 
     .meals-title-container {
@@ -188,6 +190,7 @@ main {
   div {
     display: flex;
     justify-content: center;
+    padding: 15px 0;
     button {
       padding: 15px 50px;
     }

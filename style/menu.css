@@ -327,12 +327,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 605px;
 }
 #menu .meals-container section {
   display: flex;
   flex-direction: column;
   gap: 12px;
   overflow: hidden;
+  padding: 15px;
 }
 #menu .meals-container .meals-title-container {
   position: relative;
@@ -440,6 +442,7 @@ main {
 #order-section div {
   display: flex;
   justify-content: center;
+  padding: 15px 0;
 }
 #order-section div button {
   padding: 15px 50px;
