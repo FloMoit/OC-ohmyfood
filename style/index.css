@@ -92,7 +92,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -118,7 +118,7 @@ html {
 
 body {
   font-size: 18px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   background: white;
 }
 
@@ -132,18 +132,23 @@ body {
   border: 0;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   cursor: pointer;
 }
 
 .btn:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 h1 {
   font-size: 30px;
-  font-family: "Shrikhand";
+  font-family: 'Shrikhand';
   font-style: italic;
 }
 
@@ -257,7 +262,7 @@ footer {
 }
 footer .footer-title {
   font-size: 18px;
-  font-family: "Shrikhand";
+  font-family: 'Shrikhand';
   font-style: italic;
 }
 footer .footer-menu {
@@ -379,6 +384,7 @@ footer .footer-menu .footer-item span {
 .explain-step-wrapper .step-text {
   font-size: 16px;
   font-weight: 500;
+  align-self: center;
 }
 .explain-step-wrapper .step-icon {
   color: #7e7e7e;
@@ -441,10 +447,18 @@ footer .footer-menu .footer-item span {
 .restaurents-card-wrapper .card .legend-container .like-wrapper .is-liked {
   display: none;
 }
-.restaurents-card-wrapper .card .legend-container .like-wrapper:hover .is-liked {
+.restaurents-card-wrapper
+  .card
+  .legend-container
+  .like-wrapper:hover
+  .is-liked {
   display: inline-block;
 }
-.restaurents-card-wrapper .card .legend-container .like-wrapper:hover .not-liked {
+.restaurents-card-wrapper
+  .card
+  .legend-container
+  .like-wrapper:hover
+  .not-liked {
   display: none;
 }
 .restaurents-card-wrapper .card .legend-container span {
